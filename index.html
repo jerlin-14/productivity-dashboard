@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Personal Productivity Dashboard</h1>
+        <button id="theme-btn">🌙 Toggle Theme</button>
+    </header>
+
+    <div class="dashboard">
+
+        <!-- Clock -->
+        <div class="card">
+            <h2>Current Time</h2>
+            <h3 id="clock"></h3>
+        </div>
+
+        <!-- Statistics -->
+        <div class="card">
+            <h2>Task Statistics</h2>
+
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Completed Tasks: <span id="completedTasks">0</span></p>
+            <p>Pending Tasks: <span id="pendingTasks">0</span></p>
+        </div>
+
+        <!-- Task Manager -->
+        <div class="card">
+            <h2>Task Manager</h2>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter Task"
+            >
+
+            <button onclick="addTask()">Add Task</button>
+
+            <div class="filters">
+                <button onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('pending')">Pending</button>
+                <button onclick="filterTasks('completed')">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Stopwatch -->
+        <div class="card">
+            <h2>Stopwatch</h2>
+
+            <h3 id="stopwatch">00:00:00</h3>
+
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="stopStopwatch()">Stop</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+</html>
